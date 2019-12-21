@@ -22,12 +22,17 @@ public class Producer implements Runnable {
     public void run() {
         while (true){
             try {
+
                 queue.put(new Produce(num.get(),"produce"));
                 System.out.println("put new product "+num.get());
                 num.incrementAndGet();
                 Thread.sleep(new Random().nextInt(1000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+            if (num.get()==1000){
+                System.out.println("干完下班");
+                break;
             }
         }
     }
