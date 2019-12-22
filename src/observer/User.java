@@ -8,6 +8,6 @@ public class User {
         client.setCompany(company);
         client.setTarget(target);
         client.buyFierce(20000);
-        target.inPosition("奥体中心B3出口");
+        target.inPosition("奥体中心B2出口");
     }
 }
